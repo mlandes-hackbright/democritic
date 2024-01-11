@@ -1,9 +1,24 @@
 import express from 'express';
+import cors from 'cors';
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 
-const reviews = [];
+const reviews = [
+    {
+        name: "Michael",
+        game: "Tears of the Kingdom",
+        rating: 8,
+        comment: "It was pretty good!"
+    },
+    {
+        name: "Rose",
+        game: "Tears of the Kingdom",
+        rating: 9,
+        comment: "It was awesome!"
+    }
+];
 
 app.get('/', (req, res) => {
     res.send('Hello, World!');

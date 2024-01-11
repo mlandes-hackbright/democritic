@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Metacritic</title>
+</head>
+<body>
+    <h1>Welcome to Demo-critic!!!</h1>
+    <ul id="recent-reviews-list"></ul>
+
+    <form id="new-review-form">
+        <div>
+            <label for="name-field">Name:</label>
+            <input id="name-field" type="text" name="name">
+        </div>
+        <div>
+            <label for="game-field">Game:</label>
+            <input id="game-field" type="text" name="game">
+        </div>
+        <div>
+            <label for="rating-field">Rating:</label>
+            <input id="rating-field" type="number" name="rating">
+        </div>
+        <div>
+            <label for="comment-field">Comment:</label>
+            <input id="comment-field" type="text" name="comment">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
