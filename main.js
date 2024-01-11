@@ -23,9 +23,9 @@ axios.get('http://127.0.0.1:3080/api/reviews')
             const listItem = document.createElement('li');
             listItem.innerHTML = `
             <h3>${review.game}</h3>
-            <p>${review.name}</p>
-            <p>${review.rating}</p>
-            <p>${review.comment}</p>`;
+            <p>${review.name} -- ${review.rating}</p>
+            <br>
+            <p><em>${review.comment}</em></p>`;
             recentReviewsList.appendChild(listItem);
         }
     });
@@ -54,9 +54,4 @@ newReviewForm.addEventListener('submit', evt => {
         .then(response => {
             console.log(response);
         });
-
-    // console.log('name', name);
-    // console.log('game', game);
-    // console.log('rating', rating);
-    // console.log('comment', comment);
 });
